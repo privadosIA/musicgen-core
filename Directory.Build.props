@@ -1,0 +1,24 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Native libtorch backend: cpu | cuda-windows | cuda-linux. Chosen with -p:TorchBackend=... -->
+    <TorchBackend Condition="'$(TorchBackend)' == ''">cpu</TorchBackend>
+    <!-- Must equal the TorchSharpVersion of every consumer (checked by a test and by the consumers' CI). -->
+    <TorchSharpVersion>0.107.*</TorchSharpVersion>
+    <!-- When a consumer's solution builds these projects as ProjectReferences, keep the consumer's configuration (Release stays Release)
+         instead of falling back to Debug for projects that are not in that solution. -->
+    <ShouldUnsetParentConfigurationAndPlatform>false</ShouldUnsetParentConfigurationAndPlatform>
+  </PropertyGroup>
+
+  <!-- Only ONE of the three. Core and consumer share the property so they resolve the same native runtime. -->
+  <ItemGroup Condition="'$(TorchBackend)' == 'cpu'">
+    <PackageReference Include="TorchSharp-cpu" Version="$(TorchSharpVersion)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TorchBackend)' == 'cuda-windows'">
+    <PackageReference Include="TorchSharp-cuda-windows" Version="$(TorchSharpVersion)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TorchBackend)' == 'cuda-linux'">
+    <PackageReference Include="TorchSharp-cuda-linux" Version="$(TorchSharpVersion)" />
+  </ItemGroup>
+
+</Project>
