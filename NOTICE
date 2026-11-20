@@ -1,3 +1,7 @@
 musicgen-core
 Copyright 2026 Jesús Suero
 
+These are the building blocks shared by the C# ports HeartMuLa.Net and DiffRhythm2.Net, and they follow the reference implementations those
+ports are based on:
+  - heartlib (https://github.com/HeartMuLa/heartlib), Apache-2.0
+  - DiffRhythm2 (https://github.com/ASLP-lab/DiffRhythm2), Apache-2.0, Copyright 2025 ASLP Lab and Xiaomi Inc. All Rights Reserved.
