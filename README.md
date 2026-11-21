@@ -1,5 +1,7 @@
 # musicgen-core
 
+> Shared by the ports used in [mediaOrquestator](https://orquestator.xuxo.net/); examples of the songs they make, and of the rest of the project, are on its public page (es/en).
+
 Model-agnostic building blocks shared by the C#/TorchSharp ports of music-generation models
 (HeartMuLa.Net, DiffRhythm2.Net): safetensors reading and writing, strict checkpoint loading, rotary embeddings,
 norms, convolution layers, window assembly, WAV writing and the test helpers for parity tests.
