@@ -27,6 +27,10 @@ This repository is maintained by one person in their free time. Issues and pull 
 
 The project has an adult label and a censored mode for it. Issues and pull requests must not include explicit images.
 
+## Conduct
+
+Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Security
 
 Do not report a vulnerability in a public issue: see [SECURITY.md](SECURITY.md).
