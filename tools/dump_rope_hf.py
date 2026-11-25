@@ -6,7 +6,7 @@ taken from transformers.models.llama.modeling_llama. Run ONCE; the result is ver
 Needs `transformers`, `torch` and `safetensors`. Recipe used (transformers 4.47.1, torch 2.7.0, CPU, the DiffRhythm2 image):
 
     docker run --rm --user $(id -u):$(id -g) --entrypoint python3 \
-        -v ~/Proyectos/musicgen-core:/work -e PYTHONDONTWRITEBYTECODE=1 mediaorquestator/diffrhythm2:1 \
+        -v ~/Proyectos/musicgen-core:/work -e PYTHONDONTWRITEBYTECODE=1 veritmo/diffrhythm2:1 \
         -I /work/tools/dump_rope_hf.py --out /work/tests/fixtures/rope_hf.safetensors
 
 Tensors written, per case `c` in (a, b): `c.x` [B, H, S, D] fp32, `c.pos` [B, S] int64, `c.out` [B, H, S, D] fp32 (the rotated x),
